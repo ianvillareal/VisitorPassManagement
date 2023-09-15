@@ -1,0 +1,43 @@
+﻿@model  IEnumerable<VisitorNameViewModel>
+
+<div class="panel panel-primary panel-margin-bottom-10px" id="sc-shipping-method">
+    <div class="panel-heading">Visitors</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div id="tab-action-buttons">
+                <div class="col-md-8 text-left">
+                    <div class="col-md-4">
+                        @Html.Editor("Visitor_Add", new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Visitor" } })
+                    </div>
+                    <span class="space-xs"></span>
+                    <button id="visitor-creation-btn" type="button" class="btn btn-primary visitor-creation-btn"> Add <span class="space"></span> <span class="glyphicon glyphicon-plus-sign visitor-creation-icon"></span></button>
+                    <span class="space-xs"></span>
+                    <button id="sc-shippingmethod-edit-btn" type="button" data-target="#sc-shippingmethod-creation-modal" class="btn btn-primary sc-shippingmethod-edit-btn"> Edit <span class="space"></span> <span class="glyphicon glyphicon-pencil sc-shippingmethod-edit-icon"></span></button>
+                    <span class="space-xs"></span>
+                    <button id="sc-pullshippingmethod-delete-btn" type="button" data-target="#sc-pullshippingmethod-creation-modal" class="btn btn-primary sc-pullshippingmethod-delete-btn"> Delete <span class="space"></span> <span class="glyphicon glyphicon-trash sc-pullshippingmethod-delete-icon"></span></button>
+                </div>
+                <div class="col-md-4 text-right"></div>
+            </div>
+            <table id="visitor-creation-table" class="hover stripe row-border multi-header-table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            @foreach (var option in Model)
+                                {
+                                    @*<div class="col-md-4">
+                                        @Html.EditorFor(m => option.Text, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Visitor" } })
+                                    </div>*@
+                                }
+                            @*@Html.EditorFor(m => Model..Text, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Visitor" } })*@
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

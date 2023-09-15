@@ -1,0 +1,65 @@
+﻿@using MVCGrid.Web
+@using Visitor.Presentation.ViewModels
+
+@model VisitorSearchFilterViewModel
+@{
+    ViewBag.Title = "Visitor Request";
+}
+
+<div class="row workspace">
+    <div class="top-section">
+        <div class="col-md-10 page-title">
+            <span>Visitor Request</span>
+        </div>
+        <!-- Create Button -->
+        <div class="col-md-2 top-action-btn">
+            <div class="text-right">
+                <a id="create-visitor-btn" class="btn btn-primary no-blockui" role="button" href=@Url.Action("CreateVisit", "Visitor")>
+                    <span class="glyphicon glyphicon-plus-sign button-icon"></span> Visit
+                </a>
+                <a id="create-construction-btn" class="btn btn-primary no-blockui" role="button" href=@Url.Action("CreateConstruction", "Visitor")>
+                    <span class="glyphicon glyphicon-plus-sign button-icon"></span> Construction
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- Search Field -->
+    <div class="col-md-12 search-field-section">
+        <div class="search-field">
+            <form class="mvcgrid-search submit-disabled">
+                <div class="row">
+                    @Html.LabelFor(m => m.Company, new { @class = "control-label idle-filter-label col-md-1" })
+                    <div class="col-md-11 remove-input-rightpadding">
+                        @Html.TextBoxFor(m => m.Company, new
+                           {
+                               @class = "form-control input-sm",
+                               data_mvcgrid_type = "filter",
+                               data_mvcgrid_option = "Company"
+                           })
+                    </div>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Visitors, new { @class = "control-label idle-filter-label col-sm-1" })
+                    <div class="col-sm-11 remove-input-rightpadding">
+                        @Html.TextBoxFor(m => m.Visitors, new
+                           {
+                               @class = "form-control input-sm",
+                               data_mvcgrid_type = "filter",
+                               data_mvcgrid_option = "Visitors"
+                           })
+                    </div>
+                </div>
+                <div class="vertical-space-sm"></div>
+                <button type="button" class="btn btn-default search-button" data-mvcgrid-apply-filter="click">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-12 search-result-section">
+        <div>@Html.MVCGrid("VisitorSearch")</div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,41 @@
+﻿@model Visitor.Presentation.ViewModels.SubCustomerViewModel
+
+<div id="visitorFields" class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title" id="subCustomerModal">Sub-Customer Information</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group row">
+            @Html.LabelFor(model => model.SubCustomerName, new { @class = "input-label-color", @for = "SubCustomerName" })
+            @Html.TextBoxFor(model => model.SubCustomerName, new { @class = "form-control input-sm subcustomer-name required-subcustomer-field subcustomer-validate reset-input-field check-change", placeholder = "Enter Sub-Customer Name (Required)" })
+            @Html.HiddenFor(model => model.SubCustomerName, new { @class = "hiddenSubCustomerName" })
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(model => model.SubCustomerSSOKey, new { @class = "input-label-color" })
+            @Html.TextBoxFor(model => model.SubCustomerSSOKey, new { @class = "form-control input-sm subcustomer-ssokey required-subcustomer-field subcustomer-validate reset-input-field check-change", placeholder = "SSO Key (Required)" })
+            @Html.HiddenFor(model => model.SubCustomerSSOKey, new { @class = "hiddenSubCustomerSSOKey" })
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(model => model.SubCustomerAXReference, new { @class = "input-label-color" })
+            @Html.TextBoxFor(model => model.SubCustomerAXReference, new { @class = "form-control input-sm subcustomer-axreference subcustomer-validate reset-input-field check-change", placeholder = "AX Reference" })
+            @Html.HiddenFor(model => model.SubCustomerAXReference, new { @class = "hiddenSubCustomerAXReference" })
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(model => model.SubCustomerLegacySystem, new { @class = "input-label-color" })
+            @Html.TextBoxFor(model => model.SubCustomerLegacySystem, new { @class = "form-control input-sm subcustomer-legacy-system subcustomer-validate reset-input-field check-change", placeholder = "Legacy System" })
+            @Html.HiddenFor(model => model.SubCustomerLegacySystem, new { @class = "hiddenSubCustomerLegacySystem" })
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(model => model.SubCustomerLegacyReference, new { @class = "input-label-color" })
+            @Html.TextBoxFor(model => model.SubCustomerLegacyReference, new { @class = "form-control input-sm subcustomer-legacy-reference subcustomer-validate reset-input-field check-change", placeholder = "Legacy Reference" })
+            @Html.HiddenFor(model => model.SubCustomerLegacyReference, new { @class = "hiddenSubCustomerLegacyReference" })
+        </div>
+        
+        @Html.HiddenFor(model => model.SubCustomerId)
+        @Html.HiddenFor(model => model.CustomerId)
+        @Html.HiddenFor(model => model.SubCustomerCount)
+        @Html.HiddenFor(model => model.ForAddition)
+        <input id="invListId" type="hidden" value="" />
+    </div>
+    <div id="subCustomer-addupdate-footer" class="modal-footer"></div>
+</div>

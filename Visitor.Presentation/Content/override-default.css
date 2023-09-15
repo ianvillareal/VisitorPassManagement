@@ -1,0 +1,118 @@
+﻿/*
+
+    All the default Bootstrap Class override should be implemented here.
+    
+*/
+
+.navbar {
+    background-color: #f8f8ff !important; 
+    margin-bottom: 5px !important;
+}
+
+#navbar-header {
+    padding: 0px 15px;
+    background-color: #f8f8ff !important;
+}
+
+#navbar-header > .active, .navbar-nav > li > .active {
+    font-weight: bold !important;
+    background-color: #ddd !important;
+    opacity:1 !important;
+    font-weight: bold;
+}
+
+#navbar-header a:hover {
+    background-color: #eee !important;
+}
+
+#navbar-header > .navbar-brand a:hover {
+    font-weight: normal !important;
+}
+
+#navbar-header > ul > li > a, .nav-link, .navbar-brand {
+    color: #286090 !important;
+}
+
+.row {
+    margin-top: 5px !important;
+}
+
+.jumbotron {
+    padding-top: 10px !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 5px !important;
+}
+
+.container-fluid .jumbotron {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+}
+
+.panel-heading {
+    background-color: #286090 !important;
+}
+
+.panel-primary > .panel-heading {
+    color: #f8f8ff !important;
+    border-color: #9DA6AA;
+}
+
+.panel-primary {
+    border-color: #B3BABE !important;
+}
+
+.panel-title {
+    font-size: 14px !important;
+    color: #ffffff !important;
+}
+
+.panel-body {
+    padding: 5px !important;
+}
+
+.form-section {
+    font-family: Calibri !important;
+}
+
+.form-group {
+    margin-bottom: 5px !important;
+}
+
+.list-group-item {
+    padding: 5px 0px !important;
+}
+
+select {
+    padding-left: 6px !important;
+}
+
+.nav-tabs {
+    border-bottom-color: #bbb !important;
+}
+
+.nav-tabs > li > a {
+    color: #37B7B4 !important;
+}
+
+.nav-tabs > li.active > a {
+    border-top-color: #bbb !important;
+    border-right-color: #bbb !important;
+    border-left-color: #bbb !important;
+    color: #286090 !important;
+    font-weight: bold;
+}
+
+/* Changes for MVCGrid Pagination */
+.pagination > .active > a {
+    background-color: #286090 !important;
+    color: #fff !important;
+}
+
+.pagination > li > a {
+    color: #286090 !important;
+}
+
+/* Changes for Bootstrap combo-box*/
+.typeahead-long {
+    width: 100% !important;
+}

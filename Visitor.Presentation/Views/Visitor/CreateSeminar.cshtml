@@ -1,0 +1,158 @@
+﻿@model VisitorViewModel
+@using Visitor.Presentation.Helpers;
+@using Visitor.Core;
+@{
+    ViewBag.Title = "Create Visitor Request";
+}
+
+<div class="row workspace">
+    <div class="top-section">
+        <div class="page-title action-title">
+            Create: <span class="visitor-name">Visitor Pass Details</span>
+        </div>
+    </div>
+
+    <div class="action-section remove-margin-top-30px">
+        <div class="form-section">
+            @using (Html.BeginForm("CreateSeminar", "Visitor", FormMethod.Post, new { @class = "visitorCreation-form with-validation" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true)
+                    <!-- Start of Visitor Form -->
+                    <div>
+                        @Html.HiddenFor(model => model.VisitorId, new { htmlAttributes = new { @id = "selectedvisitorId-field" } })
+                        @Html.HiddenFor(model => model.Requestor)
+                        @Html.HiddenFor(model => model.RequestorId)
+                        @Html.HiddenFor(model => model.Visitors)
+                    </div>
+                    <div class="idle-viewpanel-form">
+                        <div class="panel panel-primary panel-margin-bottom-10px" id="activity-logging-view">
+                            <div class="panel-heading">Visitor Pass Information</div>
+                            <div class="panel-body">
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.Requestor, new { @class = "control-form-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-8 col-lg-9 idle-static-text">
+                                        <span>@Html.DisplayTextFor(model => model.Requestor)</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.Purpose, new { @class = "control-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-8 col-lg-9 idle-static-text">
+                                        <span>@Model.Purpose.DisplayName().ToString()</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.Status, new { @class = "control-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-8 col-lg-9 idle-static-text">
+                                        <span>@Model.Status.DisplayName().ToString()</span>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(m => m.Arrival, new { @class = "control-form-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-3 idle-input-field">
+                                        <div id="visitor-arrival" class="input-group date">
+                                            @Html.TextBoxFor(model => model.Arrival, new
+                                            {
+                                                @Value = Model.Arrival.ToString("MMM-dd-yyyy HH:mm:ss"),
+                                                @class = "form-control input-sm date-filter white-readonly-background",
+                                                @readonly = "readonly"
+                                            })
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(m => m.Leave, new { @class = "control-form-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-3 idle-input-field">
+                                        <div id="visitor-leave" class="input-group date">
+                                            @Html.TextBoxFor(model => model.Leave, new
+                                            {
+                                                @Value = Model.Leave.ToString("MMM-dd-yyyy HH:mm:ss"),
+                                                @class = "form-control input-sm date-filter white-readonly-background",
+                                                @readonly = "readonly"
+                                            })
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    @Html.LabelFor(model => model.Company, new { @class = "control-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-8 col-lg-8">
+                                        @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Company" } })
+                                    </div>
+                                </div>
+                                @*<div class="form-group">
+                                            @Html.EditorFor(model => Model.VisitorViewList, "VisitorListCreationView")
+                                    </div>*@
+
+                                <!-- Visitors -->
+                                <div class="form-group row reduce-top-margin">
+                                    @Html.LabelFor(model => model.VisitorList, new { @class = "control-label col-md-3 col-lg-2 idle-input-label" })
+                                    <div class="col-md-8 col-lg-8 idle-input-field">
+                                        <div class="panel panel-default reduce-panel-bottom">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">Visitors</h3>
+                                                <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up collapsible"></i></span>
+                                            </div>
+                                            <div class="panel-body add-side-padding">
+                                                <div class="form-group row">
+                                                    @*<div id="tab-action-buttons">
+                                                            <div class="col-md-8 text-left">
+                                                                <span class="space-xs"></span>
+                                                                <button id="visitor-creation-btn" type="button" class="btn btn-primary visitor-creation-btn"> Add <span class="space"></span> <span class="glyphicon glyphicon-plus-sign visitor-creation-icon"></span></button>
+                                                            </div>
+                                                            <div class="col-md-4 text-right"></div>
+                                                        </div>*@
+                                                    <table id="visitor-creation-table" class="table table-striped table-bordered hover stripe row-border multi-header-table Visitors" cellspacing="0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="visitor-body">
+                                                            @foreach (var visitor in Model.VisitorList)
+                                                            {
+                                                                <tr>
+                                                                    <td>
+                                                                        @visitor
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row action-button-group">
+                    <div class="col-md-9 col-lg-10"></div>
+                    <div class="col-md-3 col-lg-2 action-button text-center">
+                        @if (Model.Status == StatusType.ForApproval || Model.Status == StatusType.InProgress || Model.Status == StatusType.Pending)
+                        {
+                            <input id="visitorCreation-ok-btn" type="submit" value="Create" class="btn btn-primary" />
+                            <input id="visitorCreation-cancel-btn" type="button" value="Cancel" class="btn btn-danger" />
+                        }
+                        else
+                        {
+                            <input id="visitor-back-button" type="button" value="Back" class="btn btn-warning html-backbutton-action" title="Back to previous page" />
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/visitor-js")

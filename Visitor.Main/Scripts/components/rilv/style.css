@@ -1,0 +1,1238 @@
+﻿/* Main CSS of the Application */
+/*** DO NOT EDIT ***/
+body {
+    /*font-size: .85em;*/
+    /*font-family: Calibri, Verdana, Helvetica, Sans-Serif !important;
+    color: #232323;*/
+    background-color: #fff;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    overflow-x: hidden;
+}
+
+code {
+    font-size: 80%;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+/* end of DO NOT EDIT zone */
+
+/* Header and Menu Styles */
+.navbar-info {
+    float: right;
+    line-height: 50px;
+    padding-right: 20px;
+    display: inline-flex;
+    /*margin-top: 10px;*/
+    width: auto;
+}
+
+.action-section {
+    font-family: Calibri !important;
+}
+
+#header {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.iccp-logo {
+    position: relative;
+    background: url('img/iccp-logo.png');
+    background-repeat: no-repeat;
+    height: 20px;
+    background-size: contain, cover;
+}
+
+.customer-logo {
+    position: relative;
+    background: url('Images/bbva.jpg') right no-repeat;
+    height: 100px;
+    margin-top: -100px;
+}
+
+.sso-user-icon {
+    position: relative;
+    background: url('Images/user-alt-32px.png') left no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+    .sso-user-icon:hover {
+        position: relative;
+        background: url('Images/user-32px.png') left no-repeat;
+        height: 32px;
+        width: 32px;
+    }
+
+.user-guide-icon {
+    position: relative;
+    background: url('Images/idemia-help-alt-32px.png') left no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+    .user-guide-icon:hover {
+        position: relative;
+        background: url('Images/idemia-help-32px.png') left no-repeat;
+        height: 32px;
+        width: 32px;
+    }
+
+.page-title {
+    position: relative;
+    color: #286090;
+    font-size: 1.75em;
+}
+
+.action-title {
+    margin-left: 20px;
+}
+
+.display-title {
+    position: relative;
+    color: #286090;
+    font-size: 1.5em;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.button-icon {
+    padding: 0 2px;
+    margin-top: 2px;
+}
+
+.top-section, .bottom-section {
+    padding: 5px;
+}
+
+.with-top-action-btn {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.center-icon {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.page-action-icon {
+    float: right;
+    margin-right: 25px;
+}
+
+.page-action-icon-button {
+    float: right;
+    margin-right: 25px;
+    margin-top: -5px;
+}
+
+.btn-disabled-background {
+    background-color: #909090 !important;
+}
+
+/* Footer */
+
+.footer {
+    margin-bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f8f8ff;
+    text-align: center;
+    color: #286090 !important;
+}
+
+/* Form Styles */
+
+.field-validation-error {
+    color: #ff0000;
+}
+
+.form-section {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group {
+    display: block;
+    padding: 0px 20px;
+    margin-bottom: 5px;
+}
+
+.rilv-input-label {
+    text-align: left !important;
+    /*color: #286090;*/
+    padding-top: 5px !important;
+}
+
+.rilv-static-text {
+    font-size: 14px !important;
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+.input-label-color {
+    color: #286090 !important;
+}
+
+.rilv-input-field {
+    /*padding-right: 100px;*/
+}
+
+.rilv-table-field {
+    padding-top: 5px;
+}
+.create-btn {
+    margin-left: 45px;
+}
+
+.button-space {
+    height: 10px;
+}
+
+.button-margin {
+    margin: 0px 5px;
+}
+
+.button-margin-right {
+    margin-right: 5px;
+}
+
+.search-field-section {
+    margin-top: 10px;
+}
+
+.search-field {
+    margin-top: 10px;
+}
+
+
+/* Tab Styles */
+
+.rilv-tab-content {
+    margin-top: 15px;
+}
+
+.rilv-tab-form {
+    margin: 0px 30px 10px;
+    background-color: #f8f8ff;
+    width: 95% !important;
+    border: 1px solid #909090;
+}
+
+.tab-panel-space {
+    margin-top: 5px;
+}
+
+.rilv-tab-pane {
+    background-color: #fff;
+}
+
+/* Timepicker Styles */
+
+.timepicker-alignment {
+    padding: 0px 15px !important;
+}
+
+/* Panel Styles */
+.panel-heading span {
+    margin-top: -20px;
+    font-size: 15px;
+}
+
+.reduce-panel-bottom {
+    margin-bottom: 10px !important;
+}
+
+/*.row {
+    margin-top: 40px;
+    padding: 0 10px;
+}*/
+
+.reduce-panel-top {
+    margin-top: -30px !important;
+    overflow:hidden;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.white-panel {
+    background-color: #eeeeee !important;
+}
+
+.white-panel-title {
+    color: inherit !important;
+}
+
+.panel-list-label {
+    font-weight: bold;
+}
+
+.panel-list-value {
+    margin-left: 5px;
+}
+
+.visitor-panel {
+    margin-bottom: 5px !important;
+}
+
+.rilv-panel-border {
+    border: 1px solid #bce8f1;
+    border-top: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.error-header {
+    font-size: 37px !important; /*18px*/
+    color: #843534;
+    margin-left: 20px;
+    font-weight: 500 !important;
+}
+
+.error-details {
+    font-size: 20px !important; /*12px*/
+    color: #286090;
+    margin-left: 20px;
+    font-weight: 300 !important;
+}
+
+/* Custom Style Classes */
+.rilv-h1 {
+    font-size: 2em; /*32px*/
+}
+
+.rilv-h2 {
+    font-size: 1.5em; /*24px*/
+}
+
+.rilv-h3 {
+    font-size: 1em; /*16px*/
+}
+
+.rilv-h4 {
+    font-size: 0.75em; /*12px*/
+}
+
+.space-xs {
+    padding: 0px 1px;
+}
+
+.space-s {
+    padding: 0px 3px;
+}
+
+.space {
+    padding: 0px 5px;
+}
+
+.space-md {
+    padding: 0px 10px !important;
+}
+
+.space-lg {
+    padding: 0px 20px !important;
+}
+
+.vertical-space-sm {
+    margin: 5px 0 !important;
+}
+
+.vertical-space-md {
+    margin: 10px 0 !important;
+}
+
+.vertical-space {
+    margin: 20px 0 !important;
+}
+
+.add-bottom-margin {
+    margin-bottom: 15px !important;
+}
+
+.add-margin-top {
+    margin-top: 15px;
+}
+
+.add-side-padding {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.add-updown-padding {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.add-side-padding-for-panel-table {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+
+.rilv-no-wrap {
+    white-space: nowrap;
+}
+
+.remove-bottom-margin {
+    margin-bottom: -15px !important;
+}
+
+.remove-margin-top-30px {
+    margin-top: -30px;
+}
+
+.search-button {
+    float: right;
+}
+
+.reduce-top-margin {
+    margin-top: -1px;
+}
+
+.reduce-bottom-margin {
+    margin-bottom: -5px !important;
+}
+
+.reduce-form-group-bottom-margin {
+    margin-bottom: -5px !important;
+}
+
+tr.odd {
+    background-color: #f1f1f1;
+}
+
+tr.even {
+    background-color: #f3f3f3;
+}
+
+.visitor-creation-btn {
+    width: 100%;
+}
+
+.visitor-creation-icon {
+    text-align: right;
+}
+
+.settings-update-label {
+    text-align: right;
+}
+
+.settings-update-fields {
+    text-align: left;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.white-readonly-background {
+    background-color: #fff !important;
+}
+
+.remove-input-padding {
+    padding-bottom: -15px;
+}
+
+.remove-input-rightpadding {
+    padding-right: 5px !important;
+}
+
+.remove-input-leftpadding {
+    padding-left: 5px !important;
+}
+
+.center-checkbox-controlformlabel {
+    margin-top: 8px !important;
+}
+
+/* Data Table */
+.multi-header-table {
+    width: 100% !important;
+}
+
+/* File Input Button Hack */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+
+/* Pull Shipping Methods */
+.pullshippingmethod-creation-buttons {
+    margin-bottom: 15px;
+}
+
+/* View Panel Form */
+.rilv-viewpanel-form {
+    margin: 0px 30px 10px;
+    background-color: #f8f8ff;
+}
+
+/* Fix File Type FF Issue */
+.fix-filetype-ff-issue {
+    height: auto !important;
+}
+
+/* Remove 15px Padding to Filter Label */
+.rilv-filter-label {
+    /*padding-left: 70px !important;*/
+    padding-right: 0px !important;
+    text-align: left !important;
+    /*color: #286090;*/
+    vertical-align: middle;
+}
+
+.add-horizontal-scroll {
+    overflow-x: auto;
+}
+
+.panel-margin-bottom-10px {
+    margin-bottom: 10px !important;
+}
+
+/* For Back to Top */
+#scroll {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #37B7B4;
+    text-indent: -9999px;
+    display: none;
+    z-index: 100;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px
+}
+
+    #scroll span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff;
+    }
+
+    #scroll:hover {
+        background-color: #286090;
+        opacity: 1;
+        filter: "alpha(opacity=100)";
+        -ms-filter: "alpha(opacity=100)";
+    }
+
+/* MVC Grid Styles */
+.rilv-no-wrap-table {
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+
+    .rilv-no-wrap-table > thead > tr > th {
+        width: 200px !important;
+    }
+
+        .rilv-no-wrap-table > thead > tr > th > img {
+            position: relative;
+            float: right;
+            vertical-align: middle;
+        }
+
+.add-width {
+    width: 200px;
+}
+
+.info {
+    font-size: 1.25em;
+    padding: 10px;
+    width: 70%;
+}
+
+.sing-lowreorder-info {
+    color: red;
+}
+
+.sing-lowreorder-usagedetails {
+    max-width: 50px;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: red;
+}
+
+.sing-monthlabels-usagedetails {
+    max-width: 50px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.sing-usagedetails {
+    max-width: 50px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.mvcgrid-headertext {
+}
+
+/* OT Datatable Styles */
+.ot-datatable-style {
+    clear: both;
+    /*border-collapse: separate;*/
+    border-spacing: 0;
+    border: 0;
+}
+
+    .ot-datatable-style > thead > tr > th {
+        border-bottom: 1px solid #111 !important;
+    }
+
+    .ot-datatable-style > tbody {
+        border-bottom: 1px solid #111;
+    }
+
+        .ot-datatable-style > tbody > tr.selected {
+            background-color: #B0BED9 !important;
+        }
+
+.ot-datatable-add-topmargin {
+    margin-top: 60px;
+}
+
+/* Tables */
+.ot-border-table > tr > td {
+    border-bottom: 1px solid !important;
+    margin-bottom: 10px;
+}
+
+.ot-no-border-table > tr > td {
+    border-top: none !important;
+}
+
+#dispatch-details-table > tbody > tr > td {
+    line-height: 0.5 !important;
+}
+
+/* Export Icons */
+.rilv-export-xls-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-xls-icon.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    right: 1px;
+}
+
+.rilv-export-csv-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-csv-icon.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    right: 1px;
+}
+
+.rilv-export-xls-32 {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-xls-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.rilv-export-xls-24 {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-xls-24px.png') no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+
+.rilv-export-xls-16 {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-xls-16px.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.rilv-export-csv-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-csv-icon.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    right: 1px;
+}
+
+.rilv-export-csv-32 {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-csv-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.rilv-export-csv-24 {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-csv-24px.png') no-repeat center;
+    width: 24px;
+    height: 24px;
+}
+
+.rilv-export-csv-16 {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-csv-16px.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.rilv-export-pdf-active {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-pdf-16px.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.rilv-export-pdf-disabled {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-pdf-16px-disabled.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.rilv-export-forecast-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-forecast-icon.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.rilv-import-forecast-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/import-forecast-icon.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.rilv-export-stocksummary-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/export-stocksummary-icon.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+/* Pull Action Icons */
+.rilv-pull-destroy-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/pull-destroy-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+    /*top: 3px;
+    right: 1px;*/
+}
+
+.rilv-pull-redirect-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/pull-redirect-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+    /*top: 3px;
+    right: 1px;*/
+}
+
+.rilv-pull-expedite-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/pull-expedite-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+    /*top: 3px;
+    right: 1px;*/
+}
+
+.rilv-pull-redirect-expedite-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/pull-redirect-expedite-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+    /*top: 3px;
+    right: 1px;*/
+}
+
+.rilv-cards-and-mailers-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/cards-and-mailers-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.column-title-border {
+    border-bottom: 1px solid #000;
+}
+
+/*.glyphicon-lg {
+    font-size: 1.5em;
+    color: #286090;
+}*/
+
+.fa-icon-adjust {
+    margin-bottom: 15px;
+}
+
+.vertical-line-separator {
+    border-right: 2px solid #909090;
+    margin: 0px 5px;
+    top: -5px;
+}
+
+.dispatch-details-label {
+    padding-left: 20px !important;
+}
+
+.rilv-back-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/back-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.rilv-submit-request-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/send-request-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.rilv-arrow-toggle-down-icon {
+    position: relative;
+    margin: 2px;
+    display: inline-block;
+    background: url('Images/toggle-down-16px.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+.rilv-arrow-toggle-up-icon {
+    position: relative;
+    margin: 2px;
+    display: inline-block;
+    background: url('Images/toggle-up-16px.png') no-repeat center;
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+/*Inventory Request Action Icons*/
+.inv-reorder-request-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/reoder-request-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.inv-picknpack-request-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/pick-and-pack-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+.inv-destruction-request-icon {
+    position: relative;
+    display: inline-block;
+    background: url('Images/destruction-request-32px.png') no-repeat center;
+    width: 32px;
+    height: 32px;
+}
+
+/* Add margin between mvcgrid table and search */
+.MVCGridContainer {
+    margin-top: 15px;
+}
+
+/* Inventory Request Text Area */
+.inv-comment-textarea {
+    resize: none;
+}
+
+
+/* Dashboard Style */
+.dashboard-content {
+    margin: 15px 10px 0px 10px !important;
+    padding: 15px;
+}
+
+.dashboard-service-description {
+    margin: 0px 10px !important;
+    padding: 15px;
+}
+
+.dashboard-cards {
+    background-color: #fff;
+    text-align: center !important;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+}
+
+.dashboard-quick-search {
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+}
+
+.dashboard-title, .dashboard-product-title, .dashboard-product-article {
+    text-align: center !important;
+}
+
+.dashboard-service-products {
+    margin-top: 15px !important;
+}
+
+.hover-cursor-pointer:hover {
+    cursor: pointer
+}
+
+.dashboard-inv-icons {
+    position: relative;
+    margin-top: 15px;
+    font-size: 4em;
+    margin-bottom: -15px;
+    color: #ADD5AF;
+    /*text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.22);*/
+}
+
+.dashboard-icons {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 30px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-border-radius: 99em;
+    -moz-border-radius: 99em;
+    border-radius: 99em;
+    box-shadow: 1px 3px 5px 0px rgba(67, 0, 153, 0.5);
+}
+
+.dashboard-inv-items-icon {
+    background: url('Images/dashboard-inventory-icon-48px.png') no-repeat center;
+}
+
+.dashboard-inv-request-icon {
+    background: url('Images/dashboard-inventory-request-icon-48px.png') no-repeat center;
+}
+
+.dashboard-data-cards {
+    background-color: #fff;
+    text-align: center !important;
+    border: 1px solid #eee;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+    margin-top: 20px !important;
+}
+
+.dashboard-data-cards-icon {
+    position: relative;
+    background-color: #286090;
+    margin-top: -20px !important;
+    margin-left: 15px !important;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #DDD;
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.22);
+}
+
+    .dashboard-data-cards-icon > i {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 15px;
+        text-align: center;
+        vertical-align: middle;
+        color: #fff;
+        font-size: 2.75em;
+    }
+
+.inv-itemswithzerostocks-bg {
+    background-color: #A4CBE6;
+}
+
+.inv-itemsbelowreorderpoint-bg {
+    background-color: #F39CA9;
+}
+
+.inv-itemsbelowforecast-bg {
+    background-color: #FBC9A0;
+}
+
+.inv-itemsusedwithin24hours-bg {
+    background-color: #37B7B4;
+}
+
+.inv-nonmovingstockitems-bg {
+    background-color: #F3E034;
+}
+
+.dashboard-details-count {
+    position: relative;
+    float: right;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: -50px;
+    margin-right: 10px;
+}
+
+.dashboard-data {
+    margin-top: 15px !important;
+    display: flexbox;
+}
+
+/* Dashboard Quick Search */
+#item-details {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.22);
+}
+
+    #item-details > .panel-heading {
+        background: #286090 !important;
+        color: #37b7b4 !important;
+    }
+
+/* Bootstrap Notify Style */
+.smart-notify-style {
+    width: fit-content !important;
+    width: -ms-fit-content !important;
+    width: -moz-fit-content !important;
+    max-width: 65%;
+}
+
+.smart-notify-title {
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0px 5px;
+}
+
+/* Overrides Bootstrap Notify close button style */
+/* Add padding-left on the x close icon */
+button.close {
+    padding: 0 0 0 5px !important;
+}
+
+.activitylog-exporterrorlog {
+    position: relative !important;
+    display: inline-block !important;
+    right: 8px;
+    width: 32px;
+    vertical-align: middle !important;
+    font-size: 32px;
+    height: 32px;
+    color: #27a2db;
+}
+
+/*Tooltip for disabled buttons*/
+.tooltip-wrapper {
+    display: inline-block;
+    float: left;
+}
+
+    .tooltip-wrapper .btn {
+        border-radius: 0;
+    }
+
+    .tooltip-wrapper:first-child .btn {
+        border-radius: 3px 0 0 3px;
+    }
+
+    .tooltip-wrapper:last-child .btn {
+        border-radius: 0 3px 3px 0;
+    }
+
+    .tooltip-wrapper .btn[disabled] {
+        pointer-events: none;
+    }
+
+.tooltip-inner {
+    background-color: #fff !important;
+    padding-right: 2px;
+    padding: 4px 8px;
+    color: #000 !important;
+    left: 0;
+    top: 100%;
+    white-space: pre !important;
+    max-width: none !important;
+    border: thick;
+    z-index: 20;
+    border-radius: 5px;
+}
+
+/*Override datatable image location*/
+table.dataTable thead .sorting {
+    background-image: url("DataTables/images/sort_both.png") !important;
+}
+
+table.dataTable thead .sorting_asc {
+    background-image: url("DataTables/images/sort_asc.png") !important;
+}
+
+table.dataTable thead .sorting_desc {
+    background-image: url("DataTables/images/sort_desc.png") !important;
+}
+
+table.dataTable thead .sorting_asc_disabled {
+    background-image: url("DataTables/images/sort_asc_disabled.png") !important;
+}
+
+table.dataTable thead .sorting_desc_disabled {
+    background-image: url("DataTables/images/sort_desc_disabled.png") !important;
+}
+
+.rilv-mvcgrid-table {
+    background-color: #ecf0f5;
+    border: inherit;
+}
+
+.rilv-status-label {
+    font-size: 100%;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-block;
+    width: 130px;
+    color: #fff;
+    vertical-align: baseline;
+    text-align: center;
+    height: auto;
+}
+
+.rilv-label-completed {
+    background-color: #08c;
+}
+
+.rilv-label-forcompletion {
+    background-color: #6d71f1;
+}
+
+.rilv-label-approve {
+    background-color: #00a65a;
+}
+
+.rilv-label-forapproval {
+    background-color: #0ac6ac;
+}
+
+.rilv-label-decline {
+    background-color: #dd4b39;
+}
+
+.rilv-label-pending {
+    background-color: #eda74f;
+}
+
+.rilv-header-color {
+    background-color: #21dd75 !important;
+}
+
+.rilv-panel-color {
+    background-color: #21dd75 !important;
+}
+
+.rilv-table-color {
+    background-color: #7aecad !important;
+}
+
+.rilv-icon-color {
+    color: #00a65a !important;
+}
+
+.rilv-logo-image {
+    float: left;
+    width: 200px;
+    /*height: 30px;*/
+    margin-top: 10px;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.rilv-logo-min-image {
+    float: left;
+    width: 25px;
+    /*height: 30px;*/
+    margin-top: 10px;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.rilv-tr-width {
+    width: inherit !important;
+}
+
+.box.box-solid.box-table-default {
+    border: 1px solid #d2d6de;
+    border-top: 1px solid transparent;
+    margin-bottom: 1px !important;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #FF0000;
+    border-color: #AEFF5E;
+}

@@ -1,0 +1,37 @@
+﻿@model Visitor.Main.ViewModels.VisitorViewModel
+
+<div id=@String.Concat("visitor-data-", Model.Index) class="panel panel-default visitor-panel">
+    <div class="panel-heading white-panel" role="tab" id=@String.Concat("visitor-header-", Model.Index)>
+        <h3 class="panel-title white-panel">
+            <a role="button" data-toggle="collapse" data-parent="#visitor-creationList" href=@String.Concat("#visitor-value-", Model.Index) aria-expanded="false" aria-controls=@String.Concat("visitor-value-", Model.Index)>
+                <span>@Model.FullName</span>
+            </a>
+        </h3>
+    </div>
+    <div id=@String.Concat("visitor-value-", Model.Index) c class="panel-collapse collapse in" role="tabpanel" aria-labelledby=@String.Concat("visitor-header-", Model.Index)>
+        <div class="panel-body rilv-panel-border">
+            <div class="form-group row">
+                @Html.LabelFor(model => model.EmailAddress, new { @class = "control-form-label col-md-4 col-lg-3 rilv-input-label" })
+                <div class="col-md-8 col-lg-9 rilv-static-text">
+                    <span>@Html.DisplayTextFor(model => model.EmailAddress)</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Occupation, new { @class = "control-form-label col-md-4 col-lg-3 rilv-input-label" })
+                <div class="col-md-8 col-lg-9 rilv-static-text">
+                    <span>@Html.DisplayTextFor(model => model.Occupation)</span>
+                </div>
+            </div>
+        </div>
+        <div id=@String.Concat("hidden-visitor-", Model.Index)>
+            @using (Html.BeginCollectionItem("Visitors"))
+            {
+                @Html.HiddenFor(model => model.FirstName)
+                @Html.HiddenFor(model => model.MiddleName)
+                @Html.HiddenFor(model => model.LastName)
+                @Html.HiddenFor(model => model.EmailAddress)
+                @Html.HiddenFor(model => model.Occupation)
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@using Visitor.Presentation.ViewModels
+@model SubCustomerViewModel
+
+<div id=@String.Concat("subCustomer-data-", Model.SubCustomerCount) class="panel panel-info list-group-item subCustomer-panel add-side-padding" data-subcustomercount=@Model.SubCustomerCount>
+    <div class="panel-heading white-panel">
+        <h3 class="panel-title white-panel-title subcustomer-record-name">@Model.SubCustomerName</h3>
+        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up collapsible"></i></span>
+        <span id="delete-subCustomer" class="pull-right clickable space delete-subCustomer" data-subcustomercount=@Model.SubCustomerCount><span class="glyphicon glyphicon-trash space"></span></span>
+        <span id="modify-subCustomer" class="pull-right clickable modify-subCustomer" data-subcustomercount=@Model.SubCustomerCount data-updateurl="@Url.Action("UpdateSubCustomer", Model)"><span class="glyphicon glyphicon-pencil"></span></span>
+    </div>
+    <div class="panel-body ot-panel-border">
+        @Html.LabelFor(m => m.SubCustomerAXReference, new { @class = "panel-list-label" })
+        <span class="panel-list-value">@Html.DisplayFor(m => m.SubCustomerAXReference)</span>
+        <br />
+        @Html.LabelFor(m => m.SubCustomerSSOKey, new { @class = "panel-list-label" })
+        <span class="panel-list-value">@Html.DisplayFor(m => m.SubCustomerSSOKey)</span>
+        <br />
+        @Html.LabelFor(m => m.SubCustomerLegacySystem, new { @class = "panel-list-label" })
+        <span class="panel-list-value">@Html.DisplayFor(m => m.SubCustomerLegacySystem)</span>
+        <br />
+        @Html.LabelFor(m => m.SubCustomerLegacyReference, new { @class = "panel-list-label" })
+        <span class="panel-list-value">@Html.DisplayFor(m => m.SubCustomerLegacyReference)</span>
+        <br />
+        <span class="panel-list-value">@Html.DisplayFor(m => m.SubCustomerActivityLogReportSettingEnabled) </span>
+        @Html.LabelFor(m => m.SubCustomerActivityLogReportSettingEnabled, new { @class = "panel-list-label" })
+        <div id="hidden-subcustomer-@Model.SubCustomerCount">
+            @using (Html.BeginCollectionItem("SubCustomers"))
+            {
+                @Html.HiddenFor(model => model.SubCustomerId)
+                @Html.HiddenFor(model => model.CustomerId)
+                @Html.HiddenFor(model => model.SubCustomerName)
+                @Html.HiddenFor(model => model.SubCustomerSSOKey)
+                @Html.HiddenFor(model => model.SubCustomerAXReference)
+                @Html.HiddenFor(model => model.SubCustomerLegacySystem)
+                @Html.HiddenFor(model => model.SubCustomerLegacyReference)
+            }
+        </div>
+    </div>
+</div>

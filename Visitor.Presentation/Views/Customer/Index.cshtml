@@ -1,0 +1,70 @@
+﻿@model CustomerViewModel
+
+@{
+    ViewBag.Title = "Create Customer";
+}
+<div class="row workspace">
+    <div class="top-section">
+        <div class="page-title action-title">
+            Create Customer
+        </div>
+    </div>
+    <div class="action-section remove-margin-top-30px">
+        <div id="customerList" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="customerListLabel" data-backdrop="static" data-url="@Url.Action("GetCPSCustomers")">
+            <div class="modal-dialog" role="document">
+                <div id="modalContainer">
+
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            @using (Html.BeginForm("Create", "Customers", FormMethod.Post, new { @id = "customerCreation-form", @class = "customerCreation-form with-validation" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true)
+                    <!-- Start of Customer Creation Form -->
+                    <div class="spo-tab-form inventory-tab-form" id="tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#customer-details" data-toggle="tab">Details</a></li>
+                            <li><a href="#activity-logging" data-toggle="tab">Activity logging</a></li>
+                        </ul>
+                        <div class="tab-content spo-tab-content">
+                            <div class="tab-pane active" id="customer-details">
+                                <!-- Sub-customer -->
+                                <div class="form-group row reduce-top-margin">
+                                    @Html.LabelFor(model => model.SubCustomers, new { @class = "control-label col-md-3 col-lg-2 spo-input-label" })
+                                    <div class="col-md-8 col-lg-8 spo-input-field">
+                                        <button id="inv-subcustomer-creation-btn" type="button" data-target="#subcustomer-creation-modal" class="btn btn-primary subcustomer-creation-btn">Sub-Customers <span class="glyphicon glyphicon-plus-sign subcustomer-creation-icon"></span></button>
+                                        <!-- display the created sub-customer -->
+                                        <div id="subcustomer-creation-modal" class="modal fade alert subCustomer-form" role="dialog" aria-labelledby="subcustomerCreation" data-backdrop="static" data-creationurl=@Url.Action("AddSubCustomer") data-posturl=@Url.Action("UpdateSubCustomerRecord")>
+                                            <div id="subcustomer-modal-container" class="modal-dialog">
+                                                <!-- Modal here -->
+                                                @Html.Partial("_AddOrUpdateSubCustomer", new SubCustomerViewModel { ForAddition = true })
+                                                @*@Html.Partial("_AddOrUpdateSubCustomer", new SubCustomerViewModel())*@
+                                            </div>
+                                        </div>
+                                        <div id="subCustomer-creationList" class="list-group">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Activity Logging Tab -->
+                            <div class="tab-pane" id="activity-logging">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row action-button-group">
+                        <div class="col-md-9 col-lg-10"></div>
+                        <div class="col-md-3 col-lg-2 action-button text-center">
+                            <input id="customerCreation-cancel-btn" type="button" value="Cancel" class="btn btn-danger" />
+                            <input id="customerCreation-ok-btn" type="submit" value="Create" class="btn btn-info" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/customer-js")
